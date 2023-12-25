@@ -42,12 +42,11 @@ public class Tracker {
 
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
-        if (index == -1) {
-            return false;
+        boolean result = index != -1;
+        if (result) {
+            items[index] = item;
         }
-        item.setId(id);
-        items[index] = item;
-        return true;
+        return result;
     }
 
     public Item findById(int id) {
@@ -62,6 +61,5 @@ public class Tracker {
             items[size - 1] = null;
             size--;
         }
-
     }
 }
