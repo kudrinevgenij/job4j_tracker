@@ -14,11 +14,11 @@ public class Matches {
             int matches = Integer.parseInt(input.nextLine());
             if (matches < 1 || matches > 3 || matches > count) {
                 System.out.println("Введите число от 1 до 3 и больше остатка");
-                continue;
+            } else {
+                turn = !turn;
+                count -= matches;
+                System.out.println(count);
             }
-            turn = !turn;
-            count -= matches;
-            System.out.println(count);
         }
         if (!turn) {
             System.out.println("Выиграл первый игрок");
