@@ -6,5 +6,4 @@ public interface Transport {
     void passengers(int number);
 
     int refill(int liters);
-
 }
