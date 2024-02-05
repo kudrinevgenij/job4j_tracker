@@ -1,17 +1,13 @@
 package ru.job4j.collection;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class FullSearch {
-    public List<String> extractNumber(List<Task> tasks) {
+    public Set<String> extractNumber(List<Task> tasks) {
         List<String> result = new ArrayList<>();
-        HashSet<String> numberSet = new HashSet<>();
         for (Task task : tasks) {
-            numberSet.add(task.getNumber());
+            result.add(task.getNumber());
         }
-        result.addAll(numberSet);
-        return result;
+        return new HashSet<>(result);
     }
 }
