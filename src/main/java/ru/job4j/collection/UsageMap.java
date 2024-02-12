@@ -1,4 +1,4 @@
-package ru.job4j.collection.collection;
+package ru.job4j.collection;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,6 +6,7 @@ import java.util.Map;
 public class UsageMap {
     public static void main(String[] args) {
         HashMap<String, String> map = new HashMap<>();
+        map.put("ivanov@mail.ru", "Ivanich");
         map.put("ivanov@mail.ru", "Ivanov");
         map.put("petrov@mail.ru", "Petrov");
         map.put("sidorov@mail.ru", "Sidorov");
