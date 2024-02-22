@@ -56,7 +56,7 @@ public class AnalyzeByMap {
     }
 
     public static Label bestSubject(List<Pupil> pupils) {
-        List<Label> labels = new LinkedList<>();
+        List<Label> labels = new ArrayList<>();
         Map<String, Integer> temp = new LinkedHashMap<>();
 
         for (Pupil pupil : pupils) {
