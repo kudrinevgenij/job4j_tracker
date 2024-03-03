@@ -45,7 +45,7 @@ public class Item {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(name, id);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class Item {
             return false;
         }
         Item item = (Item) obj;
-        return Objects.equals(name, item.getName());
+        return Objects.equals(name, item.getName()) && Objects.equals(id, item.getId());
     }
 
     @Override
