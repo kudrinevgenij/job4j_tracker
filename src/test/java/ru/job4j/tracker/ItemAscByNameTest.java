@@ -39,6 +39,6 @@ class ItemAscByNameTest {
                 new Item("First")
         );
         Collections.sort(items, new ItemDescByName());
-        assertThat(items).is(expected);
+        assertThat(items).isEqualTo(expected);
     }
 }
