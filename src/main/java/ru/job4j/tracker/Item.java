@@ -57,7 +57,7 @@ public class Item {
             return false;
         }
         Item item = (Item) obj;
-        return Objects.equals(name, item.getName()) && Objects.equals(id, item.getId());
+        return Objects.equals(name, item.getName()) && (id == item.getId());
     }
 
     @Override
