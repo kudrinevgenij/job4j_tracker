@@ -8,7 +8,6 @@ public class DepartmentsDescComparator implements Comparator<String> {
         String[] leftString = left.split("/", 2);
         String[] rightString = right.split("/", 2);
         int firstCompare = rightString[0].compareTo(leftString[0]);
-        return firstCompare == 0
-                ? leftString[leftString.length - 1].compareTo(rightString[rightString.length - 1]) : firstCompare;
+        return firstCompare == 0 ? left.compareTo(right) : firstCompare;
     }
 }
