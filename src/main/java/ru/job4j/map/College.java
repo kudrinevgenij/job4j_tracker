@@ -25,8 +25,7 @@ public class College {
             return students.get(student.get())
                     .stream()
                     .filter(subject -> subject.name().equals(name))
-                    .findFirst()
-                    .or(Optional::empty);
+                    .findFirst();
         }
         return Optional.empty();
     }
