@@ -4,7 +4,7 @@ import java.util.List;
 
 public final class SingleTracker {
 
-    private Tracker tracker = new Tracker();
+    private MemTracker memTracker = new MemTracker();
     private static SingleTracker singleTracker = null;
 
     private SingleTracker() {
@@ -19,11 +19,11 @@ public final class SingleTracker {
     }
 
     public Item add(Item item) {
-        return tracker.add(item);
+        return memTracker.add(item);
     }
 
     public List<Item> findAll() {
-        return tracker.findAll();
+        return memTracker.findAll();
     }
 
     public List<Item> findByName(String key) {
@@ -31,18 +31,18 @@ public final class SingleTracker {
     }
 
     public int indexOf(int id) {
-        return tracker.indexOf(id);
+        return memTracker.indexOf(id);
     }
 
     public boolean replace(int id, Item item) {
-        return tracker.replace(id, item);
+        return memTracker.replace(id, item);
     }
 
     public Item findById(int id) {
-        return tracker.findById(id);
+        return memTracker.findById(id);
     }
 
     public void delete(int id) {
-        tracker.delete(id);
+        memTracker.delete(id);
     }
 }

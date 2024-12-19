@@ -1,9 +1,6 @@
 package ru.job4j.tracker.action;
 
-import ru.job4j.tracker.Input;
-import ru.job4j.tracker.Item;
-import ru.job4j.tracker.Output;
-import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.*;
 
 import java.util.List;
 
@@ -20,10 +17,10 @@ public class FindByName implements UserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker, Output output) {
+    public boolean execute(Input input, Store store, Output output) {
         output.println("=== Вывод заявок по имени ===");
         String name = input.askStr("Введите имя: ");
-        List<Item> items = tracker.findByName(name);
+        List<Item> items = store.findByName(name);
         if (items.size() > 0) {
             for (Item item : items) {
                 output.println(item);

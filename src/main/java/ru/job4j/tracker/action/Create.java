@@ -1,9 +1,6 @@
 package ru.job4j.tracker.action;
 
-import ru.job4j.tracker.Input;
-import ru.job4j.tracker.Item;
-import ru.job4j.tracker.Output;
-import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.*;
 
 public class Create implements UserAction {
     private final Output output;
@@ -17,11 +14,12 @@ public class Create implements UserAction {
         return "Добавить новую заявку";
     }
 
-    public boolean execute(Input input, Tracker tracker, Output output) {
+    @Override
+    public boolean execute(Input input, Store store, Output output) {
         output.println("=== Create a new Item ===");
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);
-        tracker.add(item);
+        store.add(item);
         output.println("Добавленная заявка: " + item);
         return true;
     }
